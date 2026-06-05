@@ -1,0 +1,197 @@
+{
+  "entities": [
+    {
+      "id": "E001",
+      "name": "Alpha Holdings Ltd",
+      "type": "Company",
+      "jurisdiction": "Cayman Islands",
+      "jurisdiction_risk": "High",
+      "transparency_rating": 28,
+      "sanctions_match": false,
+      "missing_disclosure": false,
+      "description": "Asset holding vehicle incorporated in the Cayman Islands. Shows high offshore exposure."
+    },
+    {
+      "id": "E002",
+      "name": "Beta Shell Corp",
+      "type": "Company",
+      "jurisdiction": "Panama",
+      "jurisdiction_risk": "High",
+      "transparency_rating": 20,
+      "sanctions_match": false,
+      "missing_disclosure": true,
+      "description": "Panamanian shell corporation with proxy directors and missing disclosure documents."
+    },
+    {
+      "id": "E003",
+      "name": "Giga Trust",
+      "type": "Trust",
+      "jurisdiction": "Switzerland",
+      "jurisdiction_risk": "Medium",
+      "transparency_rating": 50,
+      "sanctions_match": false,
+      "missing_disclosure": false,
+      "description": "Private wealth trust registered in Zurich managing global corporate shares."
+    },
+    {
+      "id": "E004",
+      "name": "Vladimir Roskov",
+      "type": "Individual",
+      "jurisdiction": "Russian Federation",
+      "jurisdiction_risk": "Critical",
+      "transparency_rating": 15,
+      "sanctions_match": true,
+      "description": "Targeted individual under OFAC, EU, and UK sanctions lists for financial misconduct."
+    },
+    {
+      "id": "E005",
+      "name": "Nexus Trade Ltd",
+      "type": "Company",
+      "jurisdiction": "United Kingdom",
+      "jurisdiction_risk": "Low",
+      "transparency_rating": 85,
+      "sanctions_match": false,
+      "missing_disclosure": false,
+      "description": "Active trading company registered at Companies House UK. Part of a circular loop."
+    },
+    {
+      "id": "E006",
+      "name": "Vortex Holdings",
+      "type": "Company",
+      "jurisdiction": "Cyprus",
+      "jurisdiction_risk": "Medium",
+      "transparency_rating": 60,
+      "sanctions_match": false,
+      "missing_disclosure": false,
+      "description": "Holding intermediary incorporated in Nicosia, Cyprus."
+    },
+    {
+      "id": "E007",
+      "name": "Orbit Logistics",
+      "type": "Company",
+      "jurisdiction": "Cyprus",
+      "jurisdiction_risk": "Medium",
+      "transparency_rating": 60,
+      "sanctions_match": false,
+      "missing_disclosure": false,
+      "description": "Logistics operations entity based in Limassol, Cyprus."
+    },
+    {
+      "id": "E008",
+      "name": "TechStart Inc",
+      "type": "Company",
+      "jurisdiction": "United States",
+      "jurisdiction_risk": "Low",
+      "transparency_rating": 90,
+      "sanctions_match": false,
+      "missing_disclosure": false,
+      "description": "Technology startup registered in Delaware, USA."
+    },
+    {
+      "id": "E009",
+      "name": "Silicon Capital LLC",
+      "type": "Company",
+      "jurisdiction": "United States",
+      "jurisdiction_risk": "Low",
+      "transparency_rating": 90,
+      "sanctions_match": false,
+      "missing_disclosure": false,
+      "description": "Venture capital firm based in California, USA."
+    },
+    {
+      "id": "E010",
+      "name": "Jane Doe",
+      "type": "Individual",
+      "jurisdiction": "United States",
+      "jurisdiction_risk": "Low",
+      "transparency_rating": 95,
+      "sanctions_match": false,
+      "missing_disclosure": false,
+      "description": "Venture capitalist and managing partner at Silicon Capital."
+    },
+    {
+      "id": "E011",
+      "name": "Retail Group plc",
+      "type": "Company",
+      "jurisdiction": "United Kingdom",
+      "jurisdiction_risk": "Low",
+      "transparency_rating": 85,
+      "sanctions_match": false,
+      "missing_disclosure": false,
+      "description": "Public retail company listed in London, UK."
+    },
+    {
+      "id": "E012",
+      "name": "Global Trade B.V.",
+      "type": "Company",
+      "jurisdiction": "Netherlands",
+      "jurisdiction_risk": "Low",
+      "transparency_rating": 80,
+      "sanctions_match": false,
+      "missing_disclosure": false,
+      "description": "Dutch intermediate holding company."
+    },
+    {
+      "id": "E013",
+      "name": "Oceanic Holdings",
+      "type": "Company",
+      "jurisdiction": "Bahamas",
+      "jurisdiction_risk": "High",
+      "transparency_rating": 35,
+      "sanctions_match": false,
+      "missing_disclosure": false,
+      "description": "Offshore holding provider based in Nassau."
+    },
+    {
+      "id": "E014",
+      "name": "Apex Nominees Ltd",
+      "type": "Company",
+      "jurisdiction": "Isle of Man",
+      "jurisdiction_risk": "Medium",
+      "transparency_rating": 55,
+      "sanctions_match": false,
+      "missing_disclosure": true,
+      "description": "Corporate nominee shareholder shielding real ownership."
+    },
+    {
+      "id": "E015",
+      "name": "Deep Water Trust",
+      "type": "Trust",
+      "jurisdiction": "Cayman Islands",
+      "jurisdiction_risk": "High",
+      "transparency_rating": 28,
+      "sanctions_match": false,
+      "missing_disclosure": false,
+      "description": "Discretionary family trust registered in Georgetown."
+    },
+    {
+      "id": "E016",
+      "name": "John Smith",
+      "type": "Individual",
+      "jurisdiction": "United Kingdom",
+      "jurisdiction_risk": "Low",
+      "transparency_rating": 85,
+      "sanctions_match": false,
+      "missing_disclosure": false,
+      "description": "UBO of Retail Group plc via a multi-tiered corporate structure."
+    }
+  ],
+  "relationships": [
+    { "source": "E002", "target": "E001", "share": 100, "type": "owns" },
+    { "source": "E003", "target": "E002", "share": 80, "type": "owns" },
+    { "source": "E004", "target": "E003", "share": 51, "type": "beneficiary" },
+    
+    { "source": "E005", "target": "E006", "share": 40, "type": "owns" },
+    { "source": "E006", "target": "E007", "share": 60, "type": "owns" },
+    { "source": "E007", "target": "E005", "share": 55, "type": "owns" },
+    
+    { "source": "E009", "target": "E008", "share": 100, "type": "owns" },
+    { "source": "E010", "target": "E009", "share": 90, "type": "owns" },
+    
+    { "source": "E012", "target": "E011", "share": 80, "type": "owns" },
+    { "source": "E013", "target": "E012", "share": 75, "type": "owns" },
+    { "source": "E014", "target": "E013", "share": 90, "type": "owns" },
+    { "source": "E015", "target": "E014", "share": 100, "type": "owns" },
+    { "source": "E016", "target": "E015", "share": 100, "type": "beneficiary" }
+  ]
+}

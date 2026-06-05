@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #030712;
+  --color-surface: #0B1117;
+  --color-accent-primary: #38BDF8;
+  --color-accent-secondary: #818CF8;
+  --color-border: #1F2937;
+  --color-glow: rgba(56, 189, 248, 0.15);
+}
+
+:root {
+  --background: #030712;
+  --foreground: #F3F4F6;
+  --font-sans: var(--font-geist-sans);
+}
+
+body {
+  background-color: #030712;
+  color: #F3F4F6;
+  font-family: var(--font-geist-sans), sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Glassmorphism styling utilities */
+.glass-panel {
+  background: rgba(11, 17, 23, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid #1F2937;
+}
+
+.glass-panel-glow {
+  background: rgba(11, 17, 23, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.08);
+}
+
+/* Glow effects */
+.glow-active {
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.25);
+  border-color: #38BDF8;
+}
+
+.glow-text {
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+}
+
+/* Custom scrollbars for high-end Fintech terminal look */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1F2937;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #38BDF8;
+}
+
+/* Dynamic pulsing for critical risk elements */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(239, 68, 68, 0.2);
+    border-color: rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(239, 68, 68, 0.45);
+    border-color: rgba(239, 68, 68, 0.8);
+  }
+}
+
+.critical-glow {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
